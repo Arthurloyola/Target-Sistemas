@@ -1,0 +1,32 @@
+
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+
+     Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Digite o tamanho da sequência de Fibonacci:");
+    int n = scanner.nextInt();
+      
+    System.out.println("Sequência de Fibonacci com " + n + " numeros:");
+    for (int i = 0; i < n; i++) {
+        System.out.print(fibonacciRecursivo(i) + " ");
+    }
+    
+    public static int fibonacciRecursivo(int n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacciRecursivo(n - 1) + fibonacciRecursivo(n - 2);
+    }
+   boolean pertence = fibonacciRecursivo(n);
+  if (pertence) {
+      System.out.println("O número " + n + " pertence à sequência de Fibonacci.");
+  } else {
+      System.out.println("O número " + n + " não pertence à sequência de Fibonacci.");
+  }
+
+  }
+
