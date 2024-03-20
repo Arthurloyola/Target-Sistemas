@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {  
+          Scanner scanner = new Scanner(System.in);
+
+          System.out.println("Digite uma palavra: ");
+          String palavra = scanner.nextLine();
+          
+            String inverter = inverterPalavra(palavra);
+            System.out.println("Palavra invertida: " + inverter);
+        }
+
+        public static String inverterPalavra(String str) {
+            String inverter = "";
+
+            for (int i = str.length() - 1; i >= 0; i--) {
+
+                  inverter += str.charAt(i);
+            }
+            return inverter;
+        }
+    }
